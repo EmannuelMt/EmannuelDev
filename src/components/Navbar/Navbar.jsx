@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaHome as Home, FaZap as Zap, FaBriefcase as Briefcase, FaInfo as Info, FaCommentAlt as MessageSquare, FaUser as User, FaCog as Settings, FaBell as Bell, FaCheckCircle as CheckCircle2, FaSearch as Search, FaTimes as X, FaSyncAlt as RefreshCw, FaChevronRight as ChevronRight, FaSignOutAlt as LogOut } from 'react-icons/fa';
+import { FaHome as Home, FaBriefcase as Briefcase, FaInfo as Info, FaCommentAlt as MessageSquare, FaUser as User, FaCog as Settings, FaBell as Bell, FaCheckCircle as CheckCircle2, FaSearch as Search, FaTimes as X, FaSyncAlt as RefreshCw, FaChevronRight as ChevronRight, FaSignOutAlt as LogOut } from 'react-icons/fa';
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
