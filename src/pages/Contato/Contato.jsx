@@ -467,7 +467,6 @@ const Contact = () => {
 
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    
     const errors = validateForm();
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
@@ -478,27 +477,18 @@ const Contact = () => {
       return;
     }
 
-    setIsSubmitting(true);
-    setFormStatus(null);
-
-    // Simular envio
-    setTimeout(() => {
-      setFormStatus({
-        type: 'success',
-        message: 'Mensagem enviada com sucesso! Entrarei em contato em breve.'
-      });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: '',
-        department: 'geral'
-      });
-      setSelectedFile(null);
-      setIsSubmitting(false);
-    }, 1500);
+    // Substitua pelo seu número com DDI e DDD, exemplo: 5562984317595
+    const phone = '+5562984317595';
+    const msg =
+      `Nome: ${formData.name}\n` +
+      `E-mail: ${formData.email}\n` +
+      `Telefone: ${formData.phone}\n` +
+      `Empresa: ${formData.company}\n` +
+      `Assunto: ${formData.subject}\n` +
+      `Departamento: ${formData.department}\n` +
+      `Mensagem: ${formData.message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   }, [formData, validateForm]);
 
   const scrollToSection = useCallback((sectionId) => {

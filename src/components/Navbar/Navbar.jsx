@@ -76,10 +76,10 @@ const Navbar = () => {
   ], [notifications]);
 
   const notificationsList = useMemo(() => [
-    { id: 1, title: 'Novo projeto disponível', time: '5 min atrás', read: false, icon: Briefcase },
-    { id: 2, title: 'Mensagem de cliente', time: '1 hora atrás', read: false, icon: MessageSquare },
-    { id: 3, title: 'Atualização do sistema', time: '2 horas atrás', read: true, icon: RefreshCw },
-    { id: 4, title: 'Orçamento aprovado', time: '1 dia atrás', read: true, icon: CheckCircle2 },
+    { id: 1, title: 'Novo projeto disponível', time: '5 min atrás', read: false },
+    { id: 2, title: 'Mensagem de cliente', time: '1 hora atrás', read: false },
+    { id: 3, title: 'Atualização do sistema', time: '2 horas atrás', read: true },
+    { id: 4, title: 'Orçamento aprovado', time: '1 dia atrás', read: true },
   ], []);
 
   // NOW define the functions that use navLinks, userLinks, and notificationsList
@@ -350,9 +350,6 @@ const Navbar = () => {
                     <div className="notifications-list">
                       {notificationsList.map((notif) => (
                         <div key={notif.id} className={`notification-item ${!notif.read ? 'unread' : ''}`}>
-                          <div className="notification-icon">
-                            <notif.icon size={14} />
-                          </div>
                           <div className="notification-content">
                             <div className="notification-title">{notif.title}</div>
                             <div className="notification-time">{notif.time}</div>

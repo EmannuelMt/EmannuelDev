@@ -825,8 +825,7 @@ const Portfolio = () => {
       duration: 'Desenvolvimento',
       team: 1,
       complexity: 'Alta',
-      client: 'TechStart',
-      demo: 'https://demo-landing.com',
+      demo: 'https://ecosdarealidade.netlify.app/',
       code: 'https://github.com/username/landing',
       featured: false,
       status: 'em-andamento'
@@ -868,7 +867,6 @@ const Portfolio = () => {
       duration: '3 dias',
       team: 3,
       complexity: 'Alta',
-      client: 'FinTech Solutions',
       demo: 'https://burgerartisan.netlify.app/',
       featured: true,
       status: 'concluido'
@@ -909,8 +907,8 @@ const Portfolio = () => {
       duration: 'desenvolvimento',
       team: 4,
       complexity: 'Alta',
-      demo: 'https://demo-cursos.com',
-      code: 'https://github.com/username/ead-platform',
+      demo: 'https://cantinhodouniverso.netlify.app/',
+      code: 'https://github.com/EmannuelMt/Cantinho-Do-Universo',
       featured: false,
       status: 'em-andamento'
     },
@@ -941,12 +939,6 @@ const Portfolio = () => {
       ],
       challenge: 'Criar um site pessoal que seja ao mesmo tempo um portfólio profissional e um espaço para compartilhar conhecimentos, com um design moderno e interativo.',
       solution: 'Utilizei React para criar uma interface dinâmica e responsiva, Framer Motion para animações suaves e React Icons para uma variedade de ícones. O site foi otimizado para SEO e implementado com deploy contínuo usando Netlify.',
-      results: [
-        { value: '2k+', label: 'Visitas' },
-        { value: '50+', label: 'Contatos recebidos' },
-        { value: '4.9', label: 'Avaliação dos visitantes' },
-        { value: '20+', label: 'Oportunidades de trabalho' }
-      ],
       year: '2025',
       duration: '1 mês',
       team: 1,

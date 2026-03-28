@@ -410,16 +410,17 @@ const Home = () => {
 
   const handleFormSubmit = useCallback((e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-    alert('Mensagem enviada com sucesso! Entrarei em contato em até 24 horas.');
+    // Substitua pelo seu número com DDI e DDD, exemplo: 5511999999999
+    const phone = '+5562984317595';
+    const msg =
+      `Nome: ${formData.name}\n` +
+      `E-mail: ${formData.email}\n` +
+      `Empresa: ${formData.company}\n` +
+      `Telefone: ${formData.phone}\n` +
+      `Assunto: ${formData.subject}\n` +
+      `Mensagem: ${formData.message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   }, [formData]);
 
   const openVideoModal = useCallback(() => {

@@ -586,9 +586,16 @@ const Services = () => {
     try {
       const form = e.target;
       const data = Object.fromEntries(new FormData(form).entries());
-      console.log('Contact form submitted:', data);
-      // Simulação de envio — o backend pode ser integrado aqui
-      alert('Mensagem enviada (simulada) — obrigado!');
+      // Substitua pelo seu número com DDI e DDD, exemplo: 5562984317595
+      const phone = '+5599199999999';
+      const msg =
+        `Nome: ${data.name}\n` +
+        `E-mail: ${data.email}\n` +
+        `Empresa: ${data.company || ''}\n` +
+        `Serviço: ${data.service || ''}\n` +
+        `Mensagem: ${data.message}`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
       form.reset();
     } catch (err) {
       console.error(err);
